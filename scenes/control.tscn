@@ -1,0 +1,110 @@
+[gd_scene load_steps=7 format=3 uid="uid://cbg3wdm3t704c"]
+
+[ext_resource type="Script" uid="uid://dwlgi0r58x4w6" path="res://scripts/control/head_menu.gd" id="1_5p55f"]
+[ext_resource type="Script" uid="uid://cl07ksoyd6nbl" path="res://scripts/control/body_menu.gd" id="2_r67kn"]
+[ext_resource type="Script" uid="uid://jq04qkcjmxg4" path="res://scripts/control/green_eye.gd" id="2_tjwpk"]
+[ext_resource type="Script" uid="uid://b57nsu1gua2hd" path="res://scripts/control/tail_menu.gd" id="3_brbbq"]
+[ext_resource type="Script" uid="uid://b684qi425a3r0" path="res://scripts/control/earing.gd" id="3_lpubu"]
+[ext_resource type="Script" uid="uid://bshebaqnnk4pb" path="res://scripts/control/pouch_menu.gd" id="4_8n18e"]
+
+[node name="ui" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 378.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="head" type="Control" parent="."]
+anchors_preset = 0
+
+[node name="label" type="Label" parent="head"]
+layout_mode = 0
+offset_right = 150.0
+offset_bottom = 50.0
+text = "頭部"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="type_menu" type="MenuButton" parent="head"]
+layout_mode = 0
+offset_left = 150.0
+offset_right = 400.0
+offset_bottom = 50.0
+switch_on_hover = true
+script = ExtResource("1_5p55f")
+
+[node name="green_eye" type="CheckButton" parent="head"]
+layout_mode = 0
+offset_left = 400.0
+offset_right = 500.0
+offset_bottom = 50.0
+text = "綠眼"
+script = ExtResource("2_tjwpk")
+
+[node name="earing" type="CheckButton" parent="head"]
+layout_mode = 0
+offset_left = 550.0
+offset_right = 650.0
+offset_bottom = 50.0
+text = "耳環"
+script = ExtResource("3_lpubu")
+
+[node name="body" type="Control" parent="."]
+anchors_preset = 0
+
+[node name="label" type="Label" parent="body"]
+layout_mode = 0
+offset_top = 50.0
+offset_right = 150.0
+offset_bottom = 100.0
+text = "身體"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="type_menu" type="MenuButton" parent="body"]
+layout_mode = 0
+offset_left = 150.0
+offset_top = 50.0
+offset_right = 400.0
+offset_bottom = 100.0
+script = ExtResource("2_r67kn")
+
+[node name="tail" type="Control" parent="."]
+anchors_preset = 0
+
+[node name="type_label" type="Label" parent="tail"]
+layout_mode = 0
+offset_top = 100.0
+offset_right = 150.0
+offset_bottom = 150.0
+text = "尾巴"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="type_menu" type="MenuButton" parent="tail"]
+layout_mode = 0
+offset_left = 150.0
+offset_top = 100.0
+offset_right = 400.0
+offset_bottom = 150.0
+script = ExtResource("3_brbbq")
+
+[node name="pouch_label" type="Label" parent="tail"]
+layout_mode = 0
+offset_left = 400.0
+offset_top = 100.0
+offset_right = 450.0
+offset_bottom = 150.0
+text = "包包"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="pouch_menu" type="MenuButton" parent="tail"]
+layout_mode = 0
+offset_left = 450.0
+offset_top = 100.0
+offset_right = 700.0
+offset_bottom = 150.0
+script = ExtResource("4_8n18e")

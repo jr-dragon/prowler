@@ -1,0 +1,149 @@
+[gd_scene load_steps=24 format=3 uid="uid://ynp3gixigpeu"]
+
+[ext_resource type="Texture2D" uid="uid://dudf2ev0mi5ih" path="res://assets/NargPort/Base/NargPort_BASE.png" id="1_agfs1"]
+[ext_resource type="Script" uid="uid://b6pxtijvd85cv" path="res://scripts/character/character.gd" id="1_bj47h"]
+[ext_resource type="Script" uid="uid://ds81ruup3ws63" path="res://scripts/character/head.gd" id="2_lrhn5"]
+[ext_resource type="Script" uid="uid://dhmrrmwga8bwv" path="res://scripts/character/body.gd" id="2_rkhd4"]
+[ext_resource type="Script" uid="uid://cws03g0ev7cla" path="res://scripts/character/tail.gd" id="3_dp8ca"]
+[ext_resource type="Script" uid="uid://cepgrru2bbfw5" path="res://scripts/character/head_equip.gd" id="6_2cgup"]
+[ext_resource type="Script" uid="uid://bjscshhfeophb" path="res://scripts/character/cover.gd" id="8_7eonc"]
+[ext_resource type="Script" uid="uid://cmy58efqmjavx" path="res://scripts/character/under.gd" id="8_a5ia6"]
+[ext_resource type="Script" uid="uid://bsfpq5kopt4gu" path="res://scripts/character/neckfur.gd" id="9_0dpix"]
+[ext_resource type="Script" uid="uid://bgh6auujdvog6" path="res://scripts/character/arms.gd" id="9_50cep"]
+[ext_resource type="Script" uid="uid://dewm44n23kwad" path="res://scripts/character/legs.gd" id="9_irmqu"]
+[ext_resource type="Script" uid="uid://ip1btss1w2j3" path="res://scripts/character/neck.gd" id="10_2hyy3"]
+[ext_resource type="Script" uid="uid://x2wsiiaf8nbu" path="res://scripts/character/balls.gd" id="15_ih8y6"]
+[ext_resource type="Script" uid="uid://b5f274crfi055" path="res://scripts/character/cock.gd" id="15_rbud2"]
+[ext_resource type="Script" uid="uid://ejvimyl8qfm5" path="res://scripts/character/cock_ring.gd" id="19_vovfy"]
+[ext_resource type="Texture2D" uid="uid://by15yfqsogn3h" path="res://assets/NargPort/Groin/Milker/NargPort_Groin_MilkerInternal_1.png" id="20_cicko"]
+[ext_resource type="Script" uid="uid://c5gxn5qedbl0a" path="res://scripts/character/milker.gd" id="20_sougf"]
+[ext_resource type="Script" uid="uid://cdhgl8lqjhkhl" path="res://scripts/character/orgasm.gd" id="20_u0pwc"]
+[ext_resource type="Texture2D" uid="uid://c6bylrwo2s6ee" path="res://assets/NargPort/Groin/Milker/NargPort_Groin_MilkerInternal_2.png" id="21_7qyni"]
+[ext_resource type="Texture2D" uid="uid://c27gr2xfxef4h" path="res://assets/NargPort/Groin/Milker/NargPort_Groin_MilkerInternal_3.png" id="22_sougf"]
+[ext_resource type="Texture2D" uid="uid://bpx4v3fhoqk0" path="res://assets/NargPort/Groin/Milker/NargPort_Groin_MilkerInternal_4.png" id="23_p478o"]
+[ext_resource type="Texture2D" uid="uid://u1tenqpje4vd" path="res://assets/NargPort/Groin/Milker/NargPort_Groin_MilkerInternal_5.png" id="24_2y1m1"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_41u22"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("20_cicko")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_7qyni")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_sougf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_p478o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_2y1m1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_p478o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_sougf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_7qyni")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="character" type="Node2D"]
+script = ExtResource("1_bj47h")
+
+[node name="base" type="Sprite2D" parent="."]
+visible = false
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_agfs1")
+offset = Vector2(369, 643.5)
+
+[node name="tail" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+offset = Vector2(369, 643.5)
+script = ExtResource("3_dp8ca")
+
+[node name="pouch" type="Sprite2D" parent="tail"]
+offset = Vector2(369, 643.5)
+
+[node name="body" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+offset = Vector2(369, 643.5)
+script = ExtResource("2_rkhd4")
+
+[node name="cover" type="Sprite2D" parent="body"]
+offset = Vector2(369, 643.5)
+script = ExtResource("8_7eonc")
+
+[node name="arms" type="Sprite2D" parent="body"]
+offset = Vector2(369, 643.5)
+script = ExtResource("9_50cep")
+
+[node name="under" type="Sprite2D" parent="body"]
+offset = Vector2(369, 643.5)
+script = ExtResource("8_a5ia6")
+
+[node name="legs" type="Sprite2D" parent="body"]
+offset = Vector2(369, 643.5)
+script = ExtResource("9_irmqu")
+
+[node name="neckfur" type="Sprite2D" parent="body"]
+offset = Vector2(369, 643.5)
+script = ExtResource("9_0dpix")
+
+[node name="neck" type="Sprite2D" parent="body"]
+offset = Vector2(369, 643.5)
+script = ExtResource("10_2hyy3")
+
+[node name="groin" type="Node2D" parent="body"]
+
+[node name="balls" type="Sprite2D" parent="body/groin"]
+offset = Vector2(369, 643.5)
+script = ExtResource("15_ih8y6")
+
+[node name="ring" type="Sprite2D" parent="body/groin/balls"]
+offset = Vector2(369, 643.5)
+
+[node name="cock" type="Sprite2D" parent="body/groin"]
+offset = Vector2(369, 643.5)
+script = ExtResource("15_rbud2")
+
+[node name="ring" type="Sprite2D" parent="body/groin/cock"]
+offset = Vector2(369, 643.5)
+script = ExtResource("19_vovfy")
+
+[node name="orgasm" type="Sprite2D" parent="body/groin/cock"]
+offset = Vector2(369, 643.5)
+script = ExtResource("20_u0pwc")
+
+[node name="milker" type="Node2D" parent="body/groin/cock"]
+script = ExtResource("20_sougf")
+
+[node name="pump" type="Sprite2D" parent="body/groin/cock/milker"]
+offset = Vector2(369, 643.5)
+
+[node name="internal" type="AnimatedSprite2D" parent="body/groin/cock/milker/pump"]
+position = Vector2(369, 643.5)
+sprite_frames = SubResource("SpriteFrames_41u22")
+frame_progress = 0.830953
+
+[node name="head" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+offset = Vector2(369, 643.5)
+script = ExtResource("2_lrhn5")
+
+[node name="earing" type="Sprite2D" parent="head"]
+offset = Vector2(369, 643.5)
+
+[node name="eye" type="Sprite2D" parent="head"]
+offset = Vector2(369, 643.5)
+
+[node name="equip" type="Sprite2D" parent="head"]
+offset = Vector2(369, 643.5)
+script = ExtResource("6_2cgup")

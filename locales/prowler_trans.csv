@@ -1,0 +1,39 @@
+keys,en,zh-tw
+HEAD_Basic,Basic,基礎
+HEAD_Ailed,Ailed,
+HEAD_AiledBlush,Ailed Blush,
+HEAD_BlushClench,Blush Clench,臉紅
+HEAD_BlushClenchClosed,Blush Clench (Closed),臉紅（閉眼）
+HEAD_ClimaxCooldown_0,Climax Cooldown 1,喘息 1
+HEAD_ClimaxCooldown_1,Climax Cooldown 2,喘息 2
+HEAD_ClimaxCooldown_2,Climax Cooldown 3,喘息 3
+HEAD_ClimaxCooldown_3,Climax Cooldown 4,喘息 4
+HEAD_Concerned,Concerned,困惑
+HEAD_GrappleSurprise,Grapple Surprise,奮力一擊
+HEAD_Happy,Happy,高興
+HEAD_HeavyBlushClench,Heavy Blush Clench,臉紅 + 用力
+HEAD_Hood,Hood,害羞
+HEAD_Moan,Moan,呻吟
+HEAD_Moan_Green,Maon Green,呻吟（綠眼）
+HEAD_Pleasure_LookingDown1,Pleasure Looking Down 1,眼神向下地享受 1
+HEAD_Pleasure_LookingDown2,Pleasure Looking Down 2,眼神向下地享受 2
+HEAD_SkinTight,Skin Tight,
+HEAD_StunBuildup,Stun Buildup,中度暈眩
+HEAD_StunMax,Stun Max,重度暈眩
+HEAD_Surprise,Surprise,驚訝
+,,
+BODY_Basic,Basic,基礎
+BODY_Grapple,Grapple,舉右手
+BODY_IdleFlush,IdleFlush,潮紅
+BODY_NoHands,NoHands,無手
+BODY_Restrain,Restrain,反綁
+BODY_Stun,Stun,暈眩
+,,
+TAIL_Basic,Basic,基礎
+TAIL_HollowGoop,HollowGoop,
+TAIL_Latex,Latex,乳膠
+,,
+TAIL_POUCH_None,None,無
+TAIL_POUCH_Pouch1,Pouch 1,包 1
+TAIL_POUCH_Pouch2,Pouch 2,包 2
+TAIL_POUCH_Travel,Travel,旅行者套裝包

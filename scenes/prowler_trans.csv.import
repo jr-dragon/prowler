@@ -1,0 +1,17 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://cnp6o40mh2460"
+
+[deps]
+
+files=["res://scenes/prowler_trans.en.translation", "res://scenes/prowler_trans.zh.translation"]
+
+source_file="res://scenes/prowler_trans.csv"
+dest_files=["res://scenes/prowler_trans.en.translation", "res://scenes/prowler_trans.zh.translation"]
+
+[params]
+
+compress=true
+delimiter=0

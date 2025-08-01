@@ -1,0 +1,81 @@
+name: Release
+
+on:
+  release:
+    types: [released]
+
+env:
+  GODOT_VERSION: 4.4
+  EXPORT_NAME: prowler
+  PROJECT_PATH: .
+
+jobs:
+  version:
+    name: Get Version
+    runs-on: ubuntu-22.04
+    outputs:
+      version: ${{ steps.calculate.outputs.version }}
+      release_name: ${{ steps.calculate.outputs.release_name }}
+      dotnet_version: ${{ steps.calculate.outputs.dotnet_version }}
+    steps:
+      - id: calculate
+        run: |
+          REF_NAME=${{ github.ref_name }}
+          echo "version=${REF_NAME%-*}" >> $GITHUB_OUTPUT
+          echo "release_name=${REF_NAME#*-}" >> $GITHUB_OUTPUT
+          MAJOR_VERSION=$(echo ${REF_NAME%-*} | cut -c -1)
+          MINOR_VERSION=$(echo ${REF_NAME%-*} | cut -c -3)
+          if [ "$MAJOR_VERSION" = "3" ]
+          then
+              echo "dotnet_version=mono:latest" >> $GITHUB_OUTPUT
+          elif [ "$MINOR_VERSION" = "4.0" ] || [ "$MINOR_VERSION" = "4.1" ] || [ "$MINOR_VERSION" = "4.2" ] || [ "$MINOR_VERSION" = "4.3" ]
+          then
+              echo "dotnet_version=mcr.microsoft.com/dotnet/sdk:6.0-jammy" >> $GITHUB_OUTPUT
+          else
+              echo "dotnet_version=mcr.microsoft.com/dotnet/sdk:8.0-jammy" >> $GITHUB_OUTPUT
+          fi       
+
+  build:
+    name: Publish binaries
+    runs-on: ubuntu-22.04
+    strategy:
+      matrix:
+        include:
+          - asset_name: prowler-linux-amd64.zip
+          - asset_name: prowler-windows-amd64.zip
+          - asset_name: prowler-macos-universal.zip
+    container:
+      image: barichello/godot-ci:4.4
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          lfs: true
+      - name: Setup
+        run: |
+          mkdir -v -p ~/.local/share/godot/export_templates/
+          mv /root/.local/share/godot/export_templates/${GODOT_VERSION}.stable ~/.local/share/godot/export_templates/${GODOT_VERSION}.stable
+      - name: Build
+        run: |
+          EXPORT_DIR="$(readlink -f build)"
+          
+          mkdir -v -p "$EXPORT_DIR/linux"
+          mkdir -v -p "$EXPORT_DIR/mac"
+          mkdir -v -p "$EXPORT_DIR/windows"
+          
+          cd $PROJECT_PATH
+
+          godot --headless --verbose --export-release "Linux" "$EXPORT_DIR/linux/$EXPORT_NAME.x86_64"
+          godot --headless --verbose --export-release "Windows Desktop" "$EXPORT_DIR/windows/$EXPORT_NAME.exe"
+          godot --headless --verbose --export-release "macOS" "$EXPORT_DIR/mac/$EXPORT_NAME-macos-universal.zip"
+
+          zip -r prowler-linux-amd64.zip -j build/linux
+          zip -r prowler-windows-amd64.zip -j build/windows
+          mv "$EXPORT_DIR/mac/$EXPORT_NAME-macos-universal.zip" .
+      - name: Upload binaries to release
+        uses: svenstaro/upload-release-action@v2
+        with:
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          file: ${{ matrix.asset_name }}
+          asset_name: ${{ matrix.asset_name }}
+          tag: ${{ github.ref }}
