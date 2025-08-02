@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://ynp3gixigpeu"]
+[gd_scene load_steps=25 format=3 uid="uid://ynp3gixigpeu"]
 
 [ext_resource type="Texture2D" uid="uid://dudf2ev0mi5ih" path="res://assets/NargPort/Base/NargPort_BASE.png" id="1_agfs1"]
 [ext_resource type="Script" uid="uid://b6pxtijvd85cv" path="res://scripts/character/character.gd" id="1_bj47h"]
@@ -12,6 +12,7 @@
 [ext_resource type="Script" uid="uid://bgh6auujdvog6" path="res://scripts/character/arms.gd" id="9_50cep"]
 [ext_resource type="Script" uid="uid://dewm44n23kwad" path="res://scripts/character/legs.gd" id="9_irmqu"]
 [ext_resource type="Script" uid="uid://ip1btss1w2j3" path="res://scripts/character/neck.gd" id="10_2hyy3"]
+[ext_resource type="Texture2D" uid="uid://ciko4c4ui6iwf" path="res://assets/NargPort/Groin/Balls/NargPort_Groin_Balls_Ring1.png" id="12_4lh0q"]
 [ext_resource type="Script" uid="uid://x2wsiiaf8nbu" path="res://scripts/character/balls.gd" id="15_ih8y6"]
 [ext_resource type="Script" uid="uid://b5f274crfi055" path="res://scripts/character/cock.gd" id="15_rbud2"]
 [ext_resource type="Script" uid="uid://ejvimyl8qfm5" path="res://scripts/character/cock_ring.gd" id="19_vovfy"]
@@ -108,6 +109,7 @@ offset = Vector2(369, 643.5)
 script = ExtResource("15_ih8y6")
 
 [node name="ring" type="Sprite2D" parent="body/groin/balls"]
+texture = ExtResource("12_4lh0q")
 offset = Vector2(369, 643.5)
 
 [node name="cock" type="Sprite2D" parent="body/groin"]

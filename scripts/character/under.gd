@@ -1,15 +1,5 @@
 extends Sprite2D
 
-enum UNDER_TYPE {
-	NONE,
-	HANDMADE,
-	MAKESHIFT,
-	RESTRAINT_RUBBER_1, RESTRAINT_RUBBER_2, RESTRAINT_RUBBER_2_DISENCHANT,
-	SCRAPPY,
-	SNAKE,
-	TRAVEL,
-}
-
 const unders = [
 	null,
 	"Handmade",
@@ -20,7 +10,7 @@ const unders = [
 	"Travel",
 ]
 
-@export var under_type: UNDER_TYPE
+var under_type: Enums.BODY_UNDER_TYPE
 
 func _process(_delta: float) -> void:
 	if unders[under_type]:

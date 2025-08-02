@@ -1,18 +1,5 @@
 extends Sprite2D
 
-enum COCK_TYPE {
-	# shared
-	NONE,
-	BASE1, BASE2,
-	GOOP,
-	GOOP_HARDEN,
-	LATEX,
-	POACH_HUNTER,
-	
-	# erect only
-	SLIME,
-}
-
 const unerect_cocks = [
 	null,
 	"", "-2",
@@ -33,11 +20,11 @@ const erect_cocks = [
 ];
 
 
-@export var cock_type: COCK_TYPE
+@export var cock_type: Enums.BODY_COCK_TYPE
 @export var erect: bool
 
 func _process(delta: float) -> void:
-	if cock_type == COCK_TYPE.NONE:
+	if cock_type == Enums.BODY_COCK_TYPE.NONE:
 		texture = null
 	else:
 		if erect:

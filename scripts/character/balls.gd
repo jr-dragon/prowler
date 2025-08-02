@@ -1,15 +1,5 @@
 extends Sprite2D
 
-enum BALL_TYPE {
-	NONE,
-	BASE,
-	ENLARGED1, ENLARGED2, ENLARGED3,
-	GOOP_HARDEN,
-	HOLLOW_GOOP,
-	LATEX,
-	POUCH_HUNTER
-}
-
 const balls = [
 	null,
 	"",
@@ -20,8 +10,8 @@ const balls = [
 	"_PoachHunter1",
 ]
 
-@export var ball_type: BALL_TYPE
-@export var enable_ring: bool
+var ball_type: Enums.BODY_BALL_TYPE
+var enable_ring: bool
 
 var ring_node: Sprite2D
 

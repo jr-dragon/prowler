@@ -8,3 +8,6 @@
 [node name="character" parent="." instance=ExtResource("1_o5qli")]
 
 [node name="ui" parent="character" instance=ExtResource("2_0wfyh")]
+offset_left = 378.0
+offset_right = 378.0
+offset_bottom = 0.0

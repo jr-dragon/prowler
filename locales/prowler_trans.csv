@@ -1,4 +1,5 @@
 keys,en,zh-tw
+HEAD_Label,Head,頭部（表情）
 HEAD_Basic,Basic,基礎
 HEAD_Ailed,Ailed,
 HEAD_AiledBlush,Ailed Blush,
@@ -21,7 +22,29 @@ HEAD_SkinTight,Skin Tight,
 HEAD_StunBuildup,Stun Buildup,中度暈眩
 HEAD_StunMax,Stun Max,重度暈眩
 HEAD_Surprise,Surprise,驚訝
+HEAD_GreenEye,GreenEye,綠眼
+HEAD_Earing,Earing,耳環
 ,,
+HEAD_EQUIP_Label,Head Equipment,頭部裝備
+HEAD_EQUIP_None,None,
+HEAD_EQUIP_ChargerHelmet,ChargerHelmet,
+HEAD_EQUIP_GardCrown,GardCrown,
+HEAD_EQUIP_HollowGoop,HollowGoop,
+HEAD_EQUIP_LatexHood,LatexHood,
+HEAD_EQUIP_LatexMuzzle,LatexMuzzle,
+HEAD_EQUIP_LeatherBind,LeatherBind,
+HEAD_EQUIP_LeatherBind_NoGlow,LeatherBind (NoGlow),
+HEAD_EQUIP_Makeshift,Makeshift,
+HEAD_EQUIP_OldBinds_stage2,Old Binds (Stage 2),
+HEAD_EQUIP_OldBinds_stage3,Old Binds (Stage 3),
+HEAD_EQUIP_Pierce_Bar,Pierce Bar,
+HEAD_EQUIP_Pierce_Rings,Pierce Rings,
+HEAD_EQUIP_PoacherNargHelm,Poacher Narg Helm,
+HEAD_EQUIP_PoacherNargHelm_set,Poacher Narg Helm Set,
+HEAD_EQUIP_RestraintRubber,Restraint Rubber,
+HEAD_EQUIP_Snake,Snake,
+,,
+BODY_Label,Body,身體
 BODY_Basic,Basic,基礎
 BODY_Grapple,Grapple,舉右手
 BODY_IdleFlush,IdleFlush,潮紅
@@ -29,11 +52,105 @@ BODY_NoHands,NoHands,無手
 BODY_Restrain,Restrain,反綁
 BODY_Stun,Stun,暈眩
 ,,
+BODY_ARMS_Label,Arm Equipment,手臂裝備
+BODY_ARMS_None,None,
+BODY_ARMS_Chitin,Chitin,
+BODY_ARMS_HandWoven,Hand Woven,
+BODY_ARMS_LatexArms,Latex Arms,
+BODY_ARMS_LatexArms_Snake,Latex Arms Snake,
+BODY_ARMS_LatexBands,Latex Bands,
+BODY_ARMS_LeatherGloveBinds,Leather Glove Binds,
+BODY_ARMS_Makeshift,Makeshift,
+BODY_ARMS_OldBinds,Old Binds,
+BODY_ARMS_RestraintRubber,Restraint Rubber ,
+BODY_ARMS_RestraintRubber_DISENCHANT,Restraint Rubber (Disenchant),
+BODY_ARMS_Snake,Snake,
+BODY_ARMS_TinkererArmBinds,Tinkerer Arm Binds,
+,,
+BODY_COVER_Label,Cover,
+BODY_COVER_None,None,
+BODY_COVER_Goop,Goop,
+BODY_COVER_HollowGoop,Hollow Goop,
+BODY_COVER_Latex,Latex,
+BODY_COVER_PoacherUndersuite,Poacher Undersuite,
+BODY_COVER_PoacherUndersuite_Basic,Poacher Undersuite (Base),
+BODY_COVER_Slime,Slime,
+,,
+BODY_UNDER_Label,Under Equipment,內褲
+BODY_UNDER_None,None,
+BODY_UNDER_Handmade,Handmade,
+BODY_UNDER_Makeshift,Makeshift,
+BODY_UNDER_RestraintRubber1,Restraint Rubber 1,
+BODY_UNDER_RestraintRubber2,Restraint Rubber 2,
+BODY_UNDER_RestraintRubber2_DISENCHANT,Restraint Rubber 2 (Disenchant),
+BODY_UNDER_Scrappy,Scrappy,
+BODY_UNDER_Snake,Snake,
+BODY_UNDER_Travel,Travel,
+,,
+BODY_LEGS_Label,Legs Equipment,腿部裝備
+BODY_LEGS_None,None,
+BODY_LEGS_HandWoven,Hand Woven,
+BODY_LEGS_LatexBands1,Latex Bands,
+BODY_LEGS_LatexLeggings1,Latex Legging,
+BODY_LEGS_LatexLeggings1_Snake,Latex Legging (Snake),
+BODY_LEGS_Makeshift,Makeshift,
+BODY_LEGS_OldBinds,Old Binds 1,
+BODY_LEGS_OldBinds_stage2,Old Binds 2,
+BODY_LEGS_PoacherLoin,Poacher Loin,
+BODY_LEGS_RestraintRubber1,Restraint Rubber,
+BODY_LEGS_Snake,Snake,
+BODY_LEGS_Tinkerer_LegBinds,Tinkerer Leg Binds,
+BODY_LEGS_Travel,Travel,
+,,
+BODY_NECKFUR_Label,Neckfur,
+BODY_NECKFUR_Base,Base,
+BODY_NECKFUR_Flat,Flat,
+BODY_NECKFUR_Goop1,Goop,
+BODY_NECKFUR_GoopHarden,Goop Harden,
+BODY_NECKFUR_HollowGoop,Hollow Goop,
+BODY_NECKFUR_LatexBulge,Latex Bulge,
+BODY_NECKFUR_Shifted,Shifted,
+BODY_NECKFUR_Slime1,Slime,
+,,
+BODY_NECK_Label,Neck Equipment,脖子裝備
+BODY_NECK_None,None,
+BODY_NECK_BlackCollar,Black Collar,
+BODY_NECK_NecklaceSpitter,Necklace Spitter,
+BODY_NECK_PoacherCollar,Poacher Collar,
+BODY_NECK_PoacherCollar_DISENCHANT,Poacher Collar (Disenchant),
+BODY_NECK_RestraintRubber,Restraint Rubber,
+BODY_NECK_ToothNecklace,Tooth Necklace,
+,,
+BODY_BALL_Label,Ball,蛋蛋
+BODY_BALL_Ring,Ball Ring,蛋蛋環
+BODY_BALL_None,None,
+BODY_BALL_Base,Base,
+BODY_BALL_Enlarged,Enlarged 1,
+BODY_BALL_Enlarged2,Enlarged 2,
+BODY_BALL_Enlarged3,Enlarged 3,
+BODY_BALL_GoopHarden,Goop Harden,
+BODY_BALL_HollowGoop,Hollow Goop,
+BODY_BALL_Latex,Latex,
+BODY_BALL_PoachHunter,Poach Hunter,
+,,
+BODY_COCK_Label,Cock,雞雞
+BODY_COCK_Erect,Cock Erect ,勃起
+BODY_COCK_None,None,
+BODY_COCK_Base_1,Base 1,
+BODY_COCK_Base_2,Base 2,
+BODY_COCK_Goop,Goop,
+BODY_COCK_GoopHarden,Goop Harden,
+BODY_COCK_Latex,Latex,
+BODY_COCK_PoachHunter,Poach Hunter,
+BODY_COCK_Slime,Slime,
+,,
+TAIL_Label,Tail,尾巴
 TAIL_Basic,Basic,基礎
 TAIL_HollowGoop,HollowGoop,
 TAIL_Latex,Latex,乳膠
 ,,
+TAIL_POUCH_Label,Tail Pouch,尾巴包
 TAIL_POUCH_None,None,無
-TAIL_POUCH_Pouch1,Pouch 1,包 1
-TAIL_POUCH_Pouch2,Pouch 2,包 2
-TAIL_POUCH_Travel,Travel,旅行者套裝包
+TAIL_POUCH_Pouch1,Pouch 1,亞麻布包
+TAIL_POUCH_Pouch2,Pouch 2,闊葉包
+TAIL_POUCH_Travel,Travel,旅行者包

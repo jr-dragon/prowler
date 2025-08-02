@@ -28,6 +28,10 @@ window/stretch/mode="canvas_items"
 
 project/assembly_name="prowler"
 
+[gui]
+
+theme/custom_font="uid://bu6rdwhy5707c"
+
 [internationalization]
 
 locale/translations=PackedStringArray("res://locales/prowler_trans.en.translation", "res://locales/prowler_trans.zh.translation")

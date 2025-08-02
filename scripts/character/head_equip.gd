@@ -1,20 +1,5 @@
 extends Sprite2D
 
-enum EQUIP_TYPE {
-	None,
-	CHARGER_HELMET,
-	GARD_CROWN,
-	HOLLOW_GOOP,
-	LATEX_HOOD, LATEX_MUZZLE,
-	LEATHER_BIND, LEATHER_BIND_NO_GLOW,
-	MAKESHIFT,
-	OLD_BINDS_STAGE_2, OLD_BINDS_STAGE_3,
-	PIERCE_BAR, PIERCE_RINGS,
-	POACHER_NARG_HELM, POACHER_NARG_HELM_SET,
-	RESTRAINT_RUBBER,
-	SNAKE
-}
-
 const equips = [
 	null,
 	"ChargerHelmet",
@@ -30,13 +15,13 @@ const equips = [
 	"Snake",
 ]
 
-@export var equip_type: EQUIP_TYPE
+var equip_type: Enums.HEAD_EQUIP_TYPE
 
 func _ready():
 	pass
 
 func _process(_delta: float):
 	if equips[equip_type]:
-		texture = load("res://assets/NargPort/Head/NargPort_head_%s.png" % equips[equip_type])
+		texture = load("res://assets/NargPort/Head/NargPort_Head_%s.png" % equips[equip_type])
 	else:
 		texture = null;

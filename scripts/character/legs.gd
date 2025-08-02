@@ -1,18 +1,5 @@
 extends Sprite2D
 
-enum LEGS_TYPE {
-	NONE,
-	HAND_WOVEN,
-	LATEX_BANDS, LATEX_LEGGINGS, LATEX_LEGGINGS_SNAKE,
-	MAKESHIFT,
-	OLD_BINDS_STAGE1, OLD_BINDS_STAGE2,
-	POACHER_LOIN,
-	RESTRAINT_RUBBER,
-	SNAKE,
-	TINKERER_LEG_BINDS,
-	TRAVEL,
-}
-
 const legs = [
 	null,
 	"HandWoven",
@@ -26,7 +13,7 @@ const legs = [
 	"Travel"
 ]
 
-@export var legs_type: LEGS_TYPE
+var legs_type: Enums.BODY_LEGS_TYPE
 
 func _process(_delta: float) -> void:
 	if legs[legs_type]:
